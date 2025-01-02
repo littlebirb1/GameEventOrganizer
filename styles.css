@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://fintechnews.sg/wp-content/uploads/2024/05/Gaming-Industry.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.taskbar a {
+    position: relative;
+    font-size: 1.lem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px
+}
+.taskbar a:hover {
+    color: #7d00a3;
+}
+
+.taskbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #81008d;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+
+.taskbar a:hover::after {
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.taskbar .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.lem;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .2s;
+}
+
+.taskbar .btnLogin-popup:hover {
+    background: #7b008b;
+    color: #162938;   
+    border: #162938;
+}
+
+.taskbar .btnLogin-popup:hover::after {
+    content: " Now";
+}
+
+h1 {
+    font-size: 40px;
+
+}
+
+.jumbotron {
+    text-align: center;
+    backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+button.reg {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.lem;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .2s;
+}
+
+button.reg:hover {
+    background: #7b008b;
+    color: #162938;   
+    border: #162938;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+
+footer .taskbar a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer .taskbar a:hover {
+    color: #7d00a3;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #020d14;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #020d14;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:#020d14;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #020d14;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #020d14;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #020d14;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #020d14;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    color: white;
+    width: 100%;
+    height: 45px;
+    background: #020d14;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #7b008b;
+    color: #162938;   
+    border: #162938;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #020d14;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color:#020d14;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #020d14;
+    font-weight: 600;
+    padding: 0 5px;
+    appearance: none; /* Removes default dropdown arrow */
+    cursor: pointer;
+}
+
+.input-box select:focus {
+    border-color: #81008d;
+}
+
+.input-box select option {
+    color: #020d14;
+    background: white;
+}
+
+.search-input {
+    width: 50%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.results-box {
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 60%;
+}
+
+.result-item {
+    margin: 10px 0;
+    padding: 10px;
+    background: white;
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.leaderboard {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.leaderboard-table th {
+    background: var(--accent-color);
+    color: white;
+    font-size: 1.1em;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.create-team, .team-list {
+    margin-bottom: 30px;
+}
+
+.create-team form, .team-list {
+    text-align: left;
+}
+
+.team-list .team {
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team h4 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.team p {
+    margin: 5px 0;
+}
+
+.team .btn {
+    margin-top: 10px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.team .btn:hover {
+    background: #670070;
+}
+
+.tournament-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.upcoming-tournaments, .create-tournament {
+    width: 48%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-tournaments h3, .create-tournament h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.tournament {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tournament p {
+    margin: 5px 0;
+}
+
+.btn {
+    margin-top: 10px;
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #670070;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item a {
+    display: inline-block;
+}
+
+.contact-logo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-logo:hover {
+    transform: scale(1.1);
+}
+
+.about-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+    margin-bottom: 20px;
+}
+
+.about-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.about-section ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+

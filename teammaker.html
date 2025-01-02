@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Team</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Find My Team</h2>
+
+        <!-- Create Team Form -->
+        <section class="create-team">
+            <h3>Create Your Team</h3>
+            <form id="teamForm">
+                <div class="input-box">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" placeholder="" required>
+                </div>
+                <div class="input-box">
+                    <label for="teamDescription">Team Description</label>
+                    <textarea id="teamDescription" placeholder="" required></textarea>
+                </div>
+                <div class="input-box">
+                    <label for="requiredRank">Required Rank</label>
+                    <select id="requiredRank" required>
+                        <option value="" disabled selected></option>
+                        <option>Iron</option>
+                        <option>Bronze</option>
+                        <option>Silver</option>
+                        <option>Gold</option>
+                        <option>Platinum</option>
+                        <option>Diamond</option>
+                        <option>Master</option>
+                        <option>Grandmaster</option>
+                        <option>Challenger</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Create Team</button>
+            </form>
+        </section>
+
+        <!-- Existing Teams -->
+        <section class="team-list">
+            <h3>Teams Looking for Players</h3>
+            <div id="teamContainer">
+                <!-- Teams will be dynamically loaded here -->
+            </div>
+        </section>
+    </div>
+    <script src="teammaker.js"></script>
+</body>
+</html>

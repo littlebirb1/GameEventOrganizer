@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Tournaments</h2>
+        <div class="tournament-layout">
+            <!-- Upcoming Tournaments Section -->
+            <section class="upcoming-tournaments">
+                <h3>Upcoming Tournaments</h3>
+                <div id="tournamentList">
+                    <!-- Tournaments will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Create Tournament Section -->
+            <section class="create-tournament">
+                <h3>Create Your Tournament</h3>
+                <form id="tournamentForm">
+                    <div class="input-box">
+                        <label for="tournamentDate"></label>
+                        <input type="date" id="tournamentDate" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="tournamentTime"></label>
+                        <input type="time" id="tournamentTime" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="prizePool">Prize Pool</label>
+                        <input type="text" id="prizePool" placeholder="" required>
+                    </div>
+                    <button type="submit" class="btn">Create Tournament</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script src="tourneys.js"></script>
+</body>
+</html>
